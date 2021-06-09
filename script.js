@@ -29,15 +29,18 @@ function formatTime(time) {
 
 // initial call
 countdown();
+setInterval(countdown, 1000);
+
 
 document.querySelector('button').onclick = validate;
 function validate() {
-    // console.log('work');
     var name = document.getElementById('name').value;
     var mail = document.getElementById('mail').value;
-    alert('your name is ' + name + ' and email is ' + mail)
+    if (name=='') {
+        alert('Необходимо заполнить имя!')
+    } else if (mail=='') {
+        alert('Необходимо заполнить E-mail!')
+    } else confirm('your name is ' + name + ' and email is ' + mail);
     console.log(name + mail);
 }
 
-
-setInterval(countdown, 1000);
