@@ -43,4 +43,4 @@ function validate() {
     } else confirm('your name is ' + name + ' and email is ' + mail);
     console.log(name + mail);
 }
-
+ 
